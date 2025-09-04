@@ -86,10 +86,10 @@ def process_one_file(path, season_sum, season_cnt, station_min, station_max, sta
 
     idx = lowercase_index_map(header)
 
-    
+    # detect WIDE format (has month columns)
     month_cols = build_month_columns(idx)
 
-    
+    # detect LONG format columns
     long_station = None
     if "station" in idx:
         long_station = idx["station"]
@@ -112,7 +112,7 @@ def process_one_file(path, season_sum, season_cnt, station_min, station_max, sta
     elif "t" in idx:
         long_temp = idx["t"]
 
-    
+    # wide station id columns
     name_idx = None
     if "station_name" in idx:
         name_idx = idx["station_name"]
@@ -137,7 +137,7 @@ def process_one_file(path, season_sum, season_cnt, station_min, station_max, sta
         return
 
     for row in reader:
-        
+        # WIDE ROW
         if wide_ok:
             name = ""
             sid = ""
@@ -169,6 +169,7 @@ def process_one_file(path, season_sum, season_cnt, station_min, station_max, sta
                 if not long_ok:
                     continue
 
+        # LONG ROW
         if long_ok:
             if max(long_station, long_date, long_temp) >= len(row):
                 continue
