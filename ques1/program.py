@@ -79,17 +79,17 @@ def main():
     shift2 = get_valid_input("Enter shift2 (number): ")
 
     # Read raw text
-    with open("raw_text.txt", "r",) as file:
+    with open("ques1/raw_text.txt", "r",) as file:
         raw_text = file.read()
 
     # Encrypt raw text and save
     encrypted_text = encrypt_text(raw_text, shift1, shift2)
-    with open("encrypted_text.txt", "w",) as file:
+    with open("ques1/encrypted_text.txt", "w",) as file:
         file.write(encrypted_text)
 
     # Decrypt encrypt text and save
     decrypted_text = decrypt_text(encrypted_text, raw_text, shift1, shift2)
-    with open("decrypted_text.txt", "w",) as file:
+    with open("ques1/decrypted_text.txt", "w",) as file:
         file.write(decrypted_text)
 
     # Verify decryption is successful or not 
