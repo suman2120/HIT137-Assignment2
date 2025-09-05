@@ -1,0 +1,4 @@
+Summer: 32.10 degree celsius
+Autumn: 27.32 degree celsius
+Winter: 21.07 degree celsius
+Spring: 27.43 degree celsius
