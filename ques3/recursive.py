@@ -62,7 +62,7 @@ def main():
     # Draw polygon
     draw_inward_koch_polygon(n, L, d)
 
-    print("Drawing complete. Close the window to exit.")
+    print("Drawing complete successfully. Close the window to exit.")
     T.done()
 
 # Run the program
