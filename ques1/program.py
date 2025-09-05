@@ -2,16 +2,6 @@
 "encrypted_text.txt". Then create a function to decrypt the content and a function to verify the decryption was successful '''
 
 
-
-# Function to validate input entered by users
-def get_valid_input(prompt):
-    while True:
-        value = input(prompt)   # get input by user
-        if value.isdigit():    # check whether the input is valid number or not
-            return int(value)
-        print("Invalid input, Please enter a number only")  # if user enter invalid input, ask to enter a valid number
-
-
 # Function to shift a letter forward within start-end range with wrap-around.
 def shift_forward(char, shift_amount, start, end):
     new_ord = ord(char) + shift_amount  #shift letter forward
@@ -72,6 +62,15 @@ def verify_decrypt(original_text, decrypted_text):
         print("Decryption is successful. Raw texts and decrypted texts match.")
     else:
         print("Decryption is failed. Raw texts and decrypted texts doesn't match")
+
+# Function to validate input entered by users
+def get_valid_input(prompt):
+    while True:
+        value = input(prompt)   # get input by user
+        if value.isdigit():    # check whether the input is valid number or not
+            return int(value)
+        print("Invalid input, Please enter a number only")  # if user enter invalid input, ask to enter a valid number
+
 
 
 # Main program
