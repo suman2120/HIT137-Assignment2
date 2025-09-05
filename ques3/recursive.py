@@ -46,9 +46,9 @@ def draw_inward_koch_polygon(n_sides, side_len, depth):
 # Main program: get input and run
 def main():
     try:
-        n = int(input("Enter the number of sides (>= 3): ").strip())
-        L = float(input("Enter the side length (pixels > 0): ").strip())
-        d = int(input("Enter the recursion depth (>= 0): ").strip())
+        n = int(input("Enter the number of sides: ").strip())
+        L = float(input("Enter the side length: ").strip())
+        d = int(input("Enter the recursion depth: ").strip())
         if n < 3 or d < 0 or L <= 0:
             raise ValueError
     except ValueError:
